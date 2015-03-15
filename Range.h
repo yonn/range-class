@@ -7,6 +7,7 @@ private:
 	int _start;
 	int _stop;
 	int _step;
+	bool _direction;
 
 public:
 
@@ -14,9 +15,10 @@ public:
 	private:
 		int _value;
 		int _step;
+		bool _direction;
 	public:
 
-		void _init(int value, int step) { _value = value; _step = step; }
+		void _init(int value, int step, bool dir) { _value = value; _step = step; _direction = dir; }
 
 		int operator*()
 		{
@@ -25,7 +27,8 @@ public:
 
 		bool operator!=(iterator it)
 		{
-			return _value < *it;
+			bool ans = _direction ? (_value < *it) : (_value > *it);
+			return ans;
 		}
 
 		void operator++()
@@ -43,7 +46,8 @@ public:
 	{
 		_start = start;
 		_stop = stop;
-		_step = step;
+		_direction = (start < stop) ? true : false;
+		_step = _direction ? step : -step;
 	}
 
 	Range(int stop) : Range(0, stop, 1) {}
@@ -51,14 +55,14 @@ public:
 	iterator begin()
 	{
 		iterator ans;
-		ans._init(_start, _step);
+		ans._init(_start, _step, _direction);
 		return ans;
 	}
 
 	iterator end()
 	{
 		iterator ans;
-		ans._init(_stop, 0);
+		ans._init(_stop, 0, true);
 		return ans;
 	}
 };
