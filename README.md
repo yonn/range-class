@@ -2,6 +2,8 @@
 Range is a C++ class used to represent a range of integers. Range works with iterators and supports range based for loops. 
 Range attempts to stimulate the behavior of the standard range function and class from Python. 
 
+Range has been tested with VS2013 and with g++ v4.9.2.
+
 ## Usage
 Use the class in a range based for loop for maximum readability. It can also be used manually in a normal for loop, although it is not recomended. 
 
