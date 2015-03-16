@@ -1,6 +1,8 @@
 #ifndef __RANGE_H__
 #define __RANGE_H__
 
+#include <vector>
+
 class Range {
 private:
 
@@ -70,6 +72,16 @@ public:
 		ans._init(_stop, 0, true);
 		return ans;
 	}
+
+	std::vector<int> vectorize()
+	{
+		std::vector<int> ans;
+		for (auto it = begin(); it != end(); ++it) {
+			ans.push_back(*it);
+		}
+		return ans;
+	}
+
 };
 
 #endif
