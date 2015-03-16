@@ -47,7 +47,12 @@ public:
 		_start = start;
 		_stop = stop;
 		_direction = (start < stop) ? true : false;
-		_step = _direction ? step : -step;
+
+		if ((!_direction && step > 0)) {
+			_step = -step;
+		} else {
+			_step = step;
+		}
 	}
 
 	Range(int stop) : Range(0, stop, 1) {}
