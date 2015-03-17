@@ -1,5 +1,5 @@
-#ifndef __RANGE_H__
-#define __RANGE_H__
+#ifndef RANGE_H
+#define RANGE_H
 
 #include <vector>
 
@@ -84,4 +84,4 @@ public:
 
 };
 
-#endif
+#endif /*RANGE_H*/
