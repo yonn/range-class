@@ -5,14 +5,12 @@
 
 class Range {
 private:
-
 	int _start;
 	int _stop;
 	int _step;
 	bool _direction;
 
 public:
-
 	class iterator {
 	private:
 		int _value;
