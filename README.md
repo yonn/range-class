@@ -3,8 +3,7 @@ Range is a C++ class used to represent a range of integers. Range works with ite
 Range attempts to stimulate the behavior of the standard range function and class from Python. 
 
 #Supported Compilers
-Microsoft Visual Studio 2013
-g++ version 4.9.2 
+Microsoft Visual Studio 2013 and g++ version 4.9.2 
 
 ## Usage
 Use the class in a range based for loop for maximum readability. It can also be used manually in a normal for loop, although it is not recomended. 
