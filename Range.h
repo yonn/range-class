@@ -71,7 +71,7 @@ public:
 		return ans;
 	}
 
-	std::vector<int> vectorize()
+	std::vector<int> iota()
 	{
 		std::vector<int> ans;
 		for (auto it = begin(); it != end(); ++it) {
