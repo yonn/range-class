@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Range.c"
+#include "Range.cpp"
 
 int main()
 {
